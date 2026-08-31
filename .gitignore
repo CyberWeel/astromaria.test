@@ -5,6 +5,8 @@
 /wp-content/uploads/
 /wp-includes/
 
+/wp-content/themes/astromaria/style.css
 /wp-config.php
 
 *.sql
+prepros.config

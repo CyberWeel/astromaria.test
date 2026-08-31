@@ -1,0 +1,210 @@
+/**
+ * Theme Name: Тема Astromaria
+ * Author: Maria
+ * Version: 1.0
+ */
+/*
+TODO: Редирект с http => https
+TODO: Установить для страницы "Новости" шаблон "Новости"
+TODO: Установить для страницы "Статьи" шаблон "Новости"
+TODO: Установить для страницы "О нас" шаблон "О нас"
+*/
+@import "styles/settings/fonts";
+@import "styles/settings/variables";
+@import "styles/settings/functions";
+@import "styles/settings/reset";
+@import "styles/settings/general";
+/*
+// Цвета
+$dark: #030917;
+$blue: #6164ef;
+$light: #fcfcfc;
+
+// Шрифты
+$font-family: "Fair", serif;
+$font-size: 20px;
+
+// Адаптив
+$break-tablet: 980px;
+$break-mobile: 480px;
+
+// Остальное
+$container: 1200px;
+$duration: .25s;
+$radius: 10px;
+
+
+
+rem(12px)
+
+
+
+
+
+
+
+
+
+
+body {
+  height: 100%;
+}
+
+a {
+  color: var(--additional);
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+button, input {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: rem(size(bigger3));
+  font-weight: bold;
+}
+
+h2 {
+  font-size: rem(size(bigger2));
+  font-weight: bold;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $container;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.main {
+  background-color: var(--primary);
+  flex: 1;
+
+  & > .container {
+    height: 100%;
+  }
+
+  &__content {
+    background-color: color(gray1);
+    height: 100%;
+    padding: size(bigger1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.site {
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  font-family: $font-family;
+  height: 100%;
+  line-height: 1.25;
+
+  &__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header">
+    <div class="header__inner">
+        <a href="/" class="logo">Мой сайт</a>
+
+        <nav class="nav">
+            <a href="#">Главная</a>
+            <a href="#">Каталог</a>
+            <a href="#">Контакты</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="content">
+        <h1>Заголовок страницы</h1>
+        <p>Много контента...</p>
+        <p>Много контента...</p>
+        <p>Много контента...</p>
+        <!-- ... -->
+    </section>
+</main>
+
+
+
+
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.header__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: #222;
+    text-decoration: none;
+}
+*/
