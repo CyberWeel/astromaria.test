@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size;
+  height: 100%;
+  margin-top: 0 !important;
+}
+
+body {
+  font-family: $font-family;
+  height: 100%;
+}
+
+a {
+  color: $blue;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+button, input {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $container;
+  width: 100%;
+}

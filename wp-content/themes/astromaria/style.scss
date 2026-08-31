@@ -8,93 +8,17 @@ TODO: Редирект с http => https
 TODO: Установить для страницы "Новости" шаблон "Новости"
 TODO: Установить для страницы "Статьи" шаблон "Новости"
 TODO: Установить для страницы "О нас" шаблон "О нас"
+TODO: Создать файл 404
 */
 @import "styles/settings/fonts";
 @import "styles/settings/variables";
 @import "styles/settings/functions";
 @import "styles/settings/reset";
 @import "styles/settings/general";
+@import "styles/elements/site";
+@import "styles/elements/header";
+@import "styles/elements/footer";
 /*
-// Цвета
-$dark: #030917;
-$blue: #6164ef;
-$light: #fcfcfc;
-
-// Шрифты
-$font-family: "Fair", serif;
-$font-size: 20px;
-
-// Адаптив
-$break-tablet: 980px;
-$break-mobile: 480px;
-
-// Остальное
-$container: 1200px;
-$duration: .25s;
-$radius: 10px;
-
-
-
-rem(12px)
-
-
-
-
-
-
-
-
-
-
-body {
-  height: 100%;
-}
-
-a {
-  color: var(--additional);
-  font-family: inherit;
-  font-size: inherit;
-  text-decoration: none;
-}
-
-button, input {
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  outline: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-h1 {
-  font-size: rem(size(bigger3));
-  font-weight: bold;
-}
-
-h2 {
-  font-size: rem(size(bigger2));
-  font-weight: bold;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: $container;
-  width: 100%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 .main {
   background-color: var(--primary);
   flex: 1;
