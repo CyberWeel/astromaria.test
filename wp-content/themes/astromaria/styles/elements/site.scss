@@ -1,7 +1,13 @@
 .site {
-  // 
+  color: $light;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  line-height: 1.25;
 
-  &__content {}
+  &__content {
+    flex: 1;
+  }
 
   &__main {
     // 
