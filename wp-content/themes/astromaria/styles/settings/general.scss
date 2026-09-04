@@ -3,14 +3,14 @@
 }
 
 html {
-  font-size: $font-size;
+  font-size: $size;
   height: 100%;
   margin-top: 0 !important;
 }
 
 body {
   background-color: $dark;
-  font-family: $font-family;
+  font-family: $family;
   height: 100%;
 }
 
@@ -35,5 +35,6 @@ button {
 .container {
   margin: 0 auto;
   max-width: $container;
+  padding: 0 $size;
   width: 100%;
 }

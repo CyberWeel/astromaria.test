@@ -10,12 +10,21 @@ TODO: Установить для страницы "Статьи" шаблон "
 TODO: Установить для страницы "О нас" шаблон "О нас"
 TODO: Установить для страницы "Контакты" шаблон "Контакты"
 TODO: Создать файл 404
+TODO: Реализовать поиск по сайту
+
+/wp-content/themes/astromaria/images/date.png
+/wp-content/themes/astromaria/images/time_to_read.png
+/wp-content/themes/astromaria/images/watched.png
+/wp-content/themes/astromaria/images/Banner_1.jpg
+/wp-content/themes/astromaria/images/Banner_2.jpg
+/wp-content/themes/astromaria/images/logo-image.png
+/wp-content/themes/astromaria/images/logo.png
 */
 @import "styles/settings/fonts";
 @import "styles/settings/variables";
-@import "styles/settings/functions";
 @import "styles/settings/reset";
 @import "styles/settings/general";
 @import "styles/elements/site";
 @import "styles/elements/header";
 @import "styles/elements/footer";
+@import "styles/elements/banner";
