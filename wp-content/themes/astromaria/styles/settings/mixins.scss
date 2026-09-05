@@ -1,0 +1,7 @@
+@mixin hover {
+  transition: color $duration;
+
+  &:hover {
+    color: $blue;
+  }
+}

@@ -24,7 +24,9 @@
       width: 56px;
     }
 
-    &-text {}
+    &-text {
+      @include hover;
+    }
   }
 
   &__menu {
@@ -33,6 +35,7 @@
     gap: ($size * 2.5);
 
     &-link {
+      @include hover;
       color: $light;
     }
   }

@@ -12,6 +12,7 @@ TODO: Установить для страницы "Контакты" шабло
 TODO: Создать файл 404
 TODO: Реализовать поиск по сайту
 TODO: Адаптив
+TODO: hover ссылок, кнопок
 TODO: Проверить все TODO на всём сайте
 
 /wp-content/themes/astromaria/images/date.png
@@ -25,6 +26,7 @@ TODO: Проверить все TODO на всём сайте
 @import "styles/settings/fonts";
 @import "styles/settings/variables";
 @import "styles/settings/reset";
+@import "styles/settings/mixins";
 @import "styles/settings/general";
 @import "styles/elements/site";
 @import "styles/elements/header";
