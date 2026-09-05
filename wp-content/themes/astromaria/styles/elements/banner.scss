@@ -1,0 +1,45 @@
+.banner {
+  // TODO: background-image: url("/wp-content/themes/astromaria/images/Banner_1.jpg");
+  background-image: url("./images/Banner_2.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 380px;
+  justify-content: center;
+  padding: 60px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $size;
+    justify-content: center;
+    width: 400px;
+  }
+
+  &__heading {
+    font-size: ($size * 2);
+
+    &-colored {
+      color: $blue;
+      font-weight: bold;
+    }
+  }
+
+  &__description {}
+
+  &__button {
+    align-items: center;
+    align-self: flex-start;
+    background-color: $blue;
+    border-radius: $radius;
+    color: $light;
+    display: flex;
+    font-weight: bold;
+    gap: $size;
+    padding: 18px 27px;
+
+    & span {}
+  }
+}
