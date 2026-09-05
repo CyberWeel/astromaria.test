@@ -1,5 +1,155 @@
 .footer {
+  // TODO: background-image: url("/wp-content/themes/astromaria/images/footer.png");
+  background-image: url("./images/footer.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 1px solid $border;
   flex: 0;
+  position: relative;
 
-  &__content {}
+  &::after {
+    background-color: rgba(0, 0, 0, .9);
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+  }
+
+  &__outer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: $size;
+    padding-bottom: ($size * 0.5);
+    padding-top: ($size * 0.5);
+  }
+
+  &__content {
+    display: flex;
+    gap: $size;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    z-index: 20;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: ($size * 0.5);
+    flex: 0 0 320px;
+
+    &-text {}
+  }
+
+  &__logo {
+    align-items: center;
+    color: $light;
+    display: flex;
+    font-size: ($size * 1.5);
+    gap: ($size * 0.5);
+
+    &-link {
+      height: 48px;
+      width: 48px;
+    }
+
+    &-text {
+      @include hover;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: $size;
+    padding-top: ($size * 0.5);
+
+    &-heading {
+      font-size: ($size * 1.1);
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: ($size * 0.5);
+    }
+
+    &-link {
+      color: $blue;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    gap: $size;
+    padding-top: ($size * 0.5);
+
+    &-heading {
+      font-size: ($size * 1.1);
+    }
+
+    &-list {}
+
+    &-item {
+      align-items: center;
+      background-color: $back;
+      border: 1px solid $border;
+      border-radius: 50%;
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      width: 40px;
+    }
+
+    &-link {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 30px;
+      width: 30px;
+
+      &--vk {
+        // TODO: background-image: url("/wp-content/themes/astromaria/images/vk.svg");
+        background-image: url("./images/vk.svg");
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: $size;
+    padding-top: ($size * 0.5);
+
+    &-heading {
+      font-size: ($size * 1.1);
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: ($size * 0.5);
+    }
+
+    &-link {
+      color: $blue;
+    }
+
+    &-address {
+      color: $blue;
+    }
+  }
+
+  &__copyright {
+    opacity: .5;
+    position: relative;
+    z-index: 20;
+  }
 }
