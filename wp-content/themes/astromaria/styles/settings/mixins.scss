@@ -13,3 +13,11 @@
     background-color: $back;
   }
 }
+
+@mixin hover-card {
+  transition: background-color $duration;
+
+  &:hover {
+    background-color: $border;
+  }
+}

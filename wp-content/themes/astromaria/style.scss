@@ -28,7 +28,10 @@ TODO: Проверить все TODO на всём сайте
 @import "styles/settings/reset";
 @import "styles/settings/mixins";
 @import "styles/settings/general";
-@import "styles/elements/site";
-@import "styles/elements/header";
-@import "styles/elements/footer";
+
 @import "styles/elements/banner";
+@import "styles/elements/footer";
+@import "styles/elements/header";
+@import "styles/elements/last-articles";
+@import "styles/elements/last-news";
+@import "styles/elements/site";

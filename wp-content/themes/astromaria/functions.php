@@ -80,5 +80,18 @@ add_action('init', function () {
 });
 
 add_action('after_setup_theme', function () {
+	add_theme_support('post-thumbnails');
 	add_theme_support('title-tag');
 });
+
+
+
+function show_custom_excerpt(String $text, Int $length = 100) :String {
+	$text = wp_strip_all_tags($text);
+
+	if (mb_strlen($text) <= $length) return $text;
+
+	$text = mb_substr($text, 0, $length);
+	$text = mb_substr($text, 0, mb_strrpos($text, ' '));
+	return $text . '...';
+}

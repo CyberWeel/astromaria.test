@@ -8,7 +8,8 @@
   flex-direction: column;
   height: 380px;
   justify-content: center;
-  padding: 60px;
+  margin-bottom: ($size * 2);
+  padding: ($size * 3);
 
   &__content {
     display: flex;
@@ -39,7 +40,7 @@
     display: flex;
     font-weight: bold;
     gap: $size;
-    padding: 18px 27px;
+    padding: $size ($size * 1.5);
 
     & span {}
   }
