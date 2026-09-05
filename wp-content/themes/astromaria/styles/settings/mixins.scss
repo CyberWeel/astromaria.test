@@ -5,3 +5,11 @@
     color: $blue;
   }
 }
+
+@mixin hover-button {
+  transition: background-color $duration;
+
+  &:hover {
+    background-color: $back;
+  }
+}

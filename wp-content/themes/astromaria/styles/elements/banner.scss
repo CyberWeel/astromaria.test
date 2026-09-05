@@ -30,6 +30,7 @@
   &__description {}
 
   &__button {
+    @include hover-button;
     align-items: center;
     align-self: flex-start;
     background-color: $blue;
