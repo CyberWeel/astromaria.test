@@ -14,6 +14,8 @@ TODO: Реализовать поиск по сайту
 TODO: Адаптив
 TODO: hover ссылок, кнопок
 TODO: Проверить все TODO на всём сайте
+TODO: Публикация новостей и постов ещё и в группе в ВК
+TODO: Бот Python
 
 /wp-content/themes/astromaria/images/date.png
 /wp-content/themes/astromaria/images/time_to_read.png
@@ -32,6 +34,7 @@ TODO: Проверить все TODO на всём сайте
 @import "styles/elements/banner";
 @import "styles/elements/footer";
 @import "styles/elements/header";
-@import "styles/elements/last-articles";
-@import "styles/elements/last-news";
+@import "styles/elements/last-articles+last-news.scss";
 @import "styles/elements/site";
+
+@import "styles/settings/media";
