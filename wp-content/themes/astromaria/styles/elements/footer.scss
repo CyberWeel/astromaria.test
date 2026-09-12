@@ -24,14 +24,14 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: $size;
-    padding-bottom: ($size * 0.5);
-    padding-top: ($size * 0.5);
+    gap: var(--size);
+    padding-bottom: calc(var(--size) * 0.5);
+    padding-top: calc(var(--size) * 0.5);
   }
 
   &__content {
     display: flex;
-    gap: $size;
+    gap: var(--size);
     justify-content: space-between;
     position: relative;
     width: 100%;
@@ -41,18 +41,16 @@
   &__main {
     display: flex;
     flex-direction: column;
-    gap: ($size * 0.5);
+    gap: calc(var(--size) * 0.5);
     flex: 0 0 320px;
-
-    &-text {}
   }
 
   &__logo {
     align-items: center;
     color: $light;
     display: flex;
-    font-size: ($size * 1.5);
-    gap: ($size * 0.5);
+    font-size: calc(var(--size) * 1.5);
+    gap: calc(var(--size) * 0.5);
 
     &-link {
       height: 48px;
@@ -67,17 +65,17 @@
   &__menu {
     display: flex;
     flex-direction: column;
-    gap: $size;
-    padding-top: ($size * 0.5);
+    gap: var(--size);
+    padding-top: calc(var(--size) * 0.5);
 
     &-heading {
-      font-size: ($size * 1.1);
+      font-size: calc(var(--size) * 1.1);
     }
 
     &-list {
       display: flex;
       flex-direction: column;
-      gap: ($size * 0.5);
+      gap: calc(var(--size) * 0.5);
     }
 
     &-link {
@@ -88,14 +86,12 @@
   &__socials {
     display: flex;
     flex-direction: column;
-    gap: $size;
-    padding-top: ($size * 0.5);
+    gap: var(--size);
+    padding-top: calc(var(--size) * 0.5);
 
     &-heading {
-      font-size: ($size * 1.1);
+      font-size: calc(var(--size) * 1.1);
     }
-
-    &-list {}
 
     &-item {
       align-items: center;
@@ -125,17 +121,17 @@
   &__contacts {
     display: flex;
     flex-direction: column;
-    gap: $size;
-    padding-top: ($size * 0.5);
+    gap: var(--size);
+    padding-top: calc(var(--size) * 0.5);
 
     &-heading {
-      font-size: ($size * 1.1);
+      font-size: calc(var(--size) * 1.1);
     }
 
     &-list {
       display: flex;
       flex-direction: column;
-      gap: ($size * 0.5);
+      gap: calc(var(--size) * 0.5);
     }
 
     &-link {

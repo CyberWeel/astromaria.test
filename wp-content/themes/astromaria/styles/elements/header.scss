@@ -8,17 +8,17 @@
   &__content {
     align-items: center;
     display: flex;
-    gap: $size;
+    gap: var(--size);
     justify-content: space-between;
-    padding: ($size * 0.75) 0;
+    padding: calc(var(--size) * 0.75) 0;
   }
 
   &__logo {
     align-items: center;
     color: $light;
     display: flex;
-    font-size: ($size * 1.5);
-    gap: ($size * 0.75);
+    font-size: calc(var(--size) * 1.5);
+    gap: calc(var(--size) * 0.75);
 
     &-link {
       height: 56px;
@@ -33,7 +33,7 @@
   &__menu {
     align-items: center;
     display: flex;
-    gap: ($size * 2.5);
+    gap: calc(var(--size) * 2.5);
 
     &-link {
       @include hover;

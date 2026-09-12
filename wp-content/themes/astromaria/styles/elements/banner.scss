@@ -8,27 +8,25 @@
   flex-direction: column;
   height: 380px;
   justify-content: center;
-  margin-bottom: ($size * 2);
-  padding: ($size * 3);
+  margin-bottom: calc(var(--size) * 2);
+  padding: calc(var(--size) * 3);
 
   &__content {
     display: flex;
     flex-direction: column;
-    gap: $size;
+    gap: var(--size);
     justify-content: center;
     width: 400px;
   }
 
   &__heading {
-    font-size: ($size * 2);
+    font-size: calc(var(--size) * 2);
 
     &-colored {
       color: $blue;
       font-weight: bold;
     }
   }
-
-  &__description {}
 
   &__button {
     @include hover-button;
@@ -39,9 +37,7 @@
     color: $light;
     display: flex;
     font-weight: bold;
-    gap: $size;
-    padding: $size ($size * 1.5);
-
-    & span {}
+    gap: var(--size);
+    padding: var(--size) (calc(var(--size) * 1.5));
   }
 }

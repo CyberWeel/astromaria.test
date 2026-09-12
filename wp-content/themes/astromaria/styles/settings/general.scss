@@ -2,8 +2,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  --size: 20px;
+}
+
 html {
-  font-size: $size;
+  font-size: var(--size);
   height: 100%;
   margin-top: 0 !important;
 }
@@ -35,6 +39,6 @@ button {
 .container {
   margin: 0 auto;
   max-width: $container;
-  padding: 0 $size;
+  padding: 0 var(--size);
   width: 100%;
 }

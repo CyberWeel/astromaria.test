@@ -2,26 +2,24 @@
 .last-news {
   display: flex;
   flex-direction: column;
-  gap: ($size * 1.5);
-  margin-bottom: ($size * 2);
+  gap: calc(var(--size) * 1.5);
+  margin-bottom: calc(var(--size) * 2);
 
   &__header {
     align-items: center;
     display: flex;
-    gap: $size;
+    gap: var(--size);
     justify-content: space-between;
-
-    &-link {}
   }
 
   &__heading {
-    font-size: ($size * 1.5);
+    font-size: calc(var(--size) * 1.5);
     font-weight: bold;
   }
 
   &__content {
     display: flex;
-    gap: ($size * 0.75);
+    gap: calc(var(--size) * 0.75);
   }
 
   &__item {
@@ -31,7 +29,7 @@
     flex: 0 0 calc((100% - 45px) / 4);
 
     &-content {
-      padding: $size;
+      padding: var(--size);
     }
   }
 
@@ -46,8 +44,8 @@
 
   &__name {
     color: $light;
-    font-size: ($size * 1.1);
-    margin-bottom: $size;
+    font-size: calc(var(--size) * 1.1);
+    margin-bottom: var(--size);
   }
 
   &__description {
