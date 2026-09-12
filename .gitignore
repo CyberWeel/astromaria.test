@@ -5,7 +5,7 @@
 /wp-content/uploads/
 /wp-includes/
 
-/wp-content/themes/astromaria/style.css
+/wp-content/themes/astromaria/style.min.css
 /wp-config.php
 
 *.sql
