@@ -22,6 +22,10 @@
     gap: calc(var(--size) * 0.75);
   }
 
+  &__date {
+    margin-bottom: calc(var(--size) * 0.5);
+  }
+
   &__item {
     @include hover-card;
     border: 1px solid $border;

@@ -1,0 +1,180 @@
+@media (max-width: 1199px) {
+  .last-articles,
+  .last-news {
+    &__content {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      flex: 0 0 calc((100% - 15px) / 2);
+    }
+  }
+}
+@media (max-width: 899px) {
+  .banner {
+    height: auto;
+    padding: calc(var(--size) * 2);
+
+    &__content {
+      background-color: #030917aa;
+      border-radius: $radius;
+      padding: var(--size);
+      width: auto;
+    }
+  }
+
+  .footer {
+    &__content {
+      flex-wrap: wrap;
+    }
+
+    &__main {
+      flex: 0 0 100%;
+    }
+  }
+
+  .header__logo-text {
+    display: none;
+  }
+}
+@media (max-width: 599px) {
+  :root {
+    --size: 18px;
+  }
+
+  .header {
+    &__content {
+      padding: var(--size) 0;
+    }
+
+    &__logo-link {
+      height: 40px;
+      width: 40px;
+    }
+
+    &__menu {
+      gap: var(--size);
+    }
+  }
+
+  .banner {
+    margin-bottom: var(--size);
+    padding: 0;
+
+    &__content {
+      background-color: #030917cc;
+      border-radius: 0;
+    }
+
+    &__heading {
+      font-size: calc(var(--size) * 1.5);
+    }
+
+    &__button {
+      gap: calc(var(--size) * 0.5);
+      padding: calc(var(--size) * 0.75);
+    }
+  }
+
+  .last-articles,
+  .last-news {
+    gap: var(--size);
+    margin-bottom: var(--size);
+
+    &__heading {
+      font-size: (calc(var(--size) * 1.25));
+    }
+
+    &__content {
+      gap: var(--size);
+    }
+
+    &__item {
+      flex: 0 0 100%;
+    }
+  }
+
+  .footer {
+    &__outer {
+      padding: var(--size);
+    }
+
+    &__main {
+      gap: var(--size);
+    }
+
+    &__logo {
+      font-size: calc(var(--size) * 1.25);
+      gap: var(--size);
+
+      &-link {
+        height: 40px;
+        width: 40px;
+      }
+    }
+
+    &__menu {
+      padding-top: 0;
+    }
+
+    &__socials {
+      padding-top: 0;
+    }
+
+    &__contacts {
+      padding-top: 0;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .header__menu {
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &-link {
+      flex: 0 0 calc((100% - var(--size)) / 2);
+      text-align: center;
+    }
+  }
+
+  .banner__button {
+    align-self: stretch;
+    justify-content: center;
+  }
+
+  .footer {
+    &__content {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    &__main-text {
+      text-align: center;
+    }
+
+    &__logo {
+      justify-content: center;
+    }
+
+    &__menu {
+      align-items: center;
+
+      &-list {
+        align-items: center;
+      }
+    }
+
+    &__socials {
+      align-items: center;
+    }
+
+    &__contacts {
+      align-items: center;
+    }
+
+    &__copyright {
+      text-align: center;
+    }
+  }
+}
