@@ -54,4 +54,32 @@
   &__description {
     color: $light;
   }
+
+  &--list {
+    & .articles__content {
+      flex-wrap: wrap;
+    }
+
+    & .navigation {}
+
+    & .nav-links {
+      align-items: center;
+      display: flex;
+      gap: var(--size);
+      justify-content: center;
+    }
+
+    & .page-numbers {
+      @include hover-button;
+      border: 1px solid $border;
+      border-radius: $radius;
+      padding: calc(var(--size) * 0.5) calc(var(--size) * 0.75);
+
+      &.current {}
+
+      &.next {}
+
+      &.prev {}
+    }
+  }
 }

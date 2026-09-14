@@ -5,17 +5,15 @@
  */
 /*
 TODO: Редирект с http => https
-TODO: Установить для страницы "Новости" шаблон "Новости"
-TODO: Установить для страницы "Статьи" шаблон "Новости"
 TODO: Установить для страницы "О нас" шаблон "О нас"
 TODO: Установить для страницы "Контакты" шаблон "Контакты"
 TODO: Создать файл 404
 TODO: Реализовать поиск по сайту
 TODO: Адаптив
-TODO: hover ссылок, кнопок
 TODO: Проверить все TODO на всём сайте
 TODO: Публикация новостей и постов ещё и в группе в ВК
 TODO: Бот Python
+TODO: Очистить файлы SCSS от пустых селекторов
 
 /wp-content/themes/astromaria/images/date.png
 /wp-content/themes/astromaria/images/time_to_read.png
@@ -32,6 +30,7 @@ TODO: Бот Python
 @import "styles/settings/general";
 
 @import "styles/elements/banner";
+@import "styles/elements/breadcrumbs";
 @import "styles/elements/footer";
 @import "styles/elements/header";
 @import "styles/elements/articles.scss";

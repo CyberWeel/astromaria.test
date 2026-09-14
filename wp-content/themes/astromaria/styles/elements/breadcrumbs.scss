@@ -1,0 +1,21 @@
+.breadcrumbs {
+  margin: var(--size) 0;
+  overflow-x: auto;
+
+  & > span {
+    align-items: center;
+    display: flex;
+    gap: calc(var(--size) / 2);
+
+    & span {
+      white-space: nowrap;
+    }
+
+    & a {
+      @include hover-reverse;
+      white-space: nowrap;
+    }
+
+    & .breadcrumb_last {}
+  }
+}
