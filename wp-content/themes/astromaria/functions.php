@@ -1,4 +1,5 @@
 <?
+// Установка основного файла стилей
 add_action('wp_enqueue_scripts', function() {
   wp_enqueue_style(
     'astromaria-style',
@@ -8,6 +9,7 @@ add_action('wp_enqueue_scripts', function() {
   );
 });
 
+// Создание типа записей "Новости"
 add_action('init', function () {
 	register_post_type('news', [
 		'description' => '',
@@ -53,24 +55,22 @@ add_action('init', function () {
 		'public' => true,
 		'publicly_queryable' => true,
 		'query_var' => true,
-		'rewrite' => true,
+		'rewrite' => [
+			'slug' => 'news',
+			'with_front' => false,
+		],
 		'show_ui' => true,
 		'show_in_admin_bar' => true,
 		'show_in_menu' => true,
 		'show_in_nav_menus' => true,
 		'show_in_rest' => true,
 		'supports' => [
-      // 'author',
-      // 'comments',
-      // 'custom-fields',
       'editor',
       'excerpt',
-      // 'page-attributes',
       'post-formats',
       'revisions',
       'thumbnail',
       'title'
-      // 'trackbacks'
 		],
 		'taxonomies' => [
 			'category',
@@ -79,13 +79,38 @@ add_action('init', function () {
 	]);
 });
 
+// Отображение миниатюр в админке. Вывод title на страницах
 add_action('after_setup_theme', function () {
 	add_theme_support('post-thumbnails');
 	add_theme_support('title-tag');
 });
 
+// Установка вывода 8 новостей в пагинации
+add_action('pre_get_posts', function ($query) {
+	if (!is_admin() && $query->is_main_query() && $query->is_post_type_archive('news')) {
+		$query->set('posts_per_page', 8);
+	}
+});
 
+// Добавление к URL статей "/articles/"
+add_filter('post_link', function ($permalink, $post) {
+	if ($post->post_type === 'post') {
+		return home_url('/articles/' . $post->post_name . '/');
+	}
+	
+	return $permalink;
+}, 10, 2);
 
+// Правило переписи URL для статей для устранения возможных конфликтов с news
+add_action('init', function () {
+	add_rewrite_rule(
+		'^articles/([^/]+)/?$',
+		'index.php?post_type=post&name=$matches[1]',
+		'top'
+	);
+});
+
+// Функция для обрезки текста до $length символов
 function show_custom_excerpt(String $text, Int $length = 100) :String {
 	$text = wp_strip_all_tags($text);
 
