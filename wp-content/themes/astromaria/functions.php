@@ -120,3 +120,103 @@ function show_custom_excerpt(String $text, Int $length = 100) :String {
 	$text = mb_substr($text, 0, mb_strrpos($text, ' '));
 	return $text . '...';
 }
+
+// Функция, возвращающая количество просмотров поста
+function get_post_views() {
+	$post_id = get_the_ID();
+	return (int) get_post_meta($post_id, 'views', true);
+}
+
+// Функция, увеличивающая количество просмотров поста на 1
+function increment_post_views() {
+	if (is_single() && !is_admin()) {
+		$post_id = get_the_ID();
+		$views = get_post_views();
+
+		update_post_meta($post_id, 'views', $views + 1);
+	}
+}
+add_action('wp', 'increment_post_views');
+
+// Получение "Похожих записей" поста
+function get_related_posts($post_type = 'post', $limit = 4) {
+	$post_id = get_the_ID();
+
+	if (!$post_id) return [];
+
+	$categories = wp_get_post_categories($post_id);
+	$tags = wp_get_post_tags($post_id, ['fields' => 'ids']);
+	$found = [];
+
+	// Получаем опубликованные записи, исключая текущую и найденные.
+	$get_posts = function($args) use ($post_id, &$found, $limit, $post_type) {
+		$args = array_merge([
+			'post_type'           => $post_type,
+			'post_status'         => 'publish',
+			'posts_per_page'      => $limit - count($found),
+			'post__not_in'        => array_merge([$post_id], $found),
+			'ignore_sticky_posts' => true,
+			'fields'              => 'ids',
+		], $args);
+
+		if ($args['posts_per_page'] <= 0) return;
+
+		$ids = get_posts($args);
+
+		foreach ($ids as $id) {
+			$found[] = $id;
+		}
+	};
+
+	// 1. Полное совпадение набора меток.
+	if ($tags) {
+		$candidates = get_posts([
+			'post_type'      => $post_type,
+			'post_status'    => 'publish',
+			'posts_per_page' => -1,
+			'post__not_in'   => [$post_id],
+			'tag__and'       => $tags,
+			'fields'         => 'ids'
+		]);
+
+		foreach ($candidates as $id) {
+			$candidate_tags = wp_get_post_tags($id, ['fields' => 'ids']);
+			sort($candidate_tags);
+			$current_tags = $tags;
+			sort($current_tags);
+
+			if ($candidate_tags === $current_tags) {
+				$found[] = $id;
+				
+				if (count($found) >= $limit) {
+					return array_slice($found, 0, $limit);
+				}
+			}
+		}
+	}
+
+	// 2. Частичное совпадение меток.
+	if ($tags && count($found) < $limit) {
+		$get_posts([
+			'tag__in' => $tags,
+			'orderby' => 'date',
+			'order'   => 'DESC'
+		]);
+	}
+
+	// 3. Совпадение рубрики.
+	if ($categories && count($found) < $limit) {
+		$get_posts([
+			'category__in' => $categories,
+			'orderby'      => 'date',
+			'order'        => 'DESC'
+		]);
+	}
+
+	// 4. Случайные записи.
+	if (count($found) < $limit) {
+		$get_posts([ 'orderby' => 'rand' ]);
+	}
+
+	return array_slice($found, 0, $limit);
+}

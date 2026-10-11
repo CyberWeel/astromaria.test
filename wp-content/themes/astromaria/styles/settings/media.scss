@@ -36,6 +36,10 @@
   .header__logo-text {
     display: none;
   }
+
+  .article__image {
+    height: 280px;
+  }
 }
 @media (max-width: 599px) {
   :root {
@@ -123,6 +127,31 @@
 
     &__contacts {
       padding-top: 0;
+    }
+  }
+
+  .article {
+    // 
+
+    &__name {
+      font-size: calc(var(--size) * 1.5);
+    }
+
+    &__image {
+      height: 250px;
+    }
+
+    &__information {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: calc(var(--size) * 0.5);
+    }
+
+    &__date,
+    &__views,
+    &__reading {
+      border: none;
+      padding: 0;
     }
   }
 }
