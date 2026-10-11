@@ -9,19 +9,12 @@ TODO: Установить для страницы "О нас" шаблон "О 
 TODO: Установить для страницы "Контакты" шаблон "Контакты"
 TODO: Создать файл 404
 TODO: Реализовать поиск по сайту
-TODO: Адаптив
-TODO: Проверить все TODO на всём сайте
+TODO: Проверить все TODO на всём сайте (а также комментарии // и /*
 TODO: Публикация новостей и постов ещё и в группе в ВК
 TODO: Бот Python
 TODO: Очистить файлы SCSS от пустых селекторов
-
-/wp-content/themes/astromaria/images/date.png
-/wp-content/themes/astromaria/images/time_to_read.png
-/wp-content/themes/astromaria/images/watched.png
-/wp-content/themes/astromaria/images/Banner_1.jpg
-/wp-content/themes/astromaria/images/Banner_2.jpg
-/wp-content/themes/astromaria/images/logo-image.png
-/wp-content/themes/astromaria/images/logo.png
+TODO: var(--size) * 0.5 ИЛИ var(--size) / 2
+TODO: Удалить все неиспользуемые изображения - типа /wp-content/themes/astromaria/images/logo.png
 */
 @import "styles/settings/fonts";
 @import "styles/settings/variables";
@@ -29,11 +22,12 @@ TODO: Очистить файлы SCSS от пустых селекторов
 @import "styles/settings/mixins";
 @import "styles/settings/general";
 
+@import "styles/elements/article";
+@import "styles/elements/articles";
 @import "styles/elements/banner";
 @import "styles/elements/breadcrumbs";
 @import "styles/elements/footer";
 @import "styles/elements/header";
-@import "styles/elements/articles.scss";
 @import "styles/elements/site";
 
 @import "styles/settings/media";

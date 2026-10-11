@@ -9,7 +9,7 @@ yoast_breadcrumb('<div class="breadcrumbs">', '</div>');
       while (have_posts()) {
         the_post(); ?>
         <a class="articles__item" href="<? the_permalink() ?>">
-          <div class="articles__image" style="background-image: url('<?=get_the_post_thumbnail_url(get_the_ID())?>');"></div>
+          <div class="articles__image" style="background-image: url('<?=get_the_post_thumbnail_url()?>');"></div>
           <div class="articles__item-content">
             <div class="articles__date"><?=wp_date('j F Y', strtotime(get_the_date()))?></div>
             <div class="articles__name"><? the_title() ?></div>
