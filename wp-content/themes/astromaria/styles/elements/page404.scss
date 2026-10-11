@@ -1,0 +1,16 @@
+.page404 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size);
+  margin-bottom: var(--size);
+
+  &__heading {
+    font-size: calc(var(--size) * 2);
+    text-align: center;
+  }
+
+  &__link {
+    font-size: calc(var(--size) * 1.25);
+  }
+}
