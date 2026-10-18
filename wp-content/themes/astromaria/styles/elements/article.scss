@@ -9,7 +9,7 @@
     border-radius: $radius;
     box-shadow: 0 0 5px $light;
     color: $light;
-    padding: calc(var(--size) / 4) calc(var(--size) / 2);
+    padding: calc(var(--size) * 0.25) calc(var(--size) * 0.5);
     text-transform: uppercase;
     width: max-content;
   }
@@ -29,7 +29,7 @@
     align-items: center;
     border-right: 1px solid $border;
     display: flex;
-    gap: calc(var(--size) / 2);
+    gap: calc(var(--size) * 0.5);
     padding: 0 var(--size) 0 0;
 
     &-icon {
@@ -63,7 +63,7 @@
   }
 
   &__content * {
-    margin-bottom: calc(var(--size) / 2);
+    margin-bottom: calc(var(--size) * 0.5);
   }
 
   &__content *:last-child {
@@ -82,7 +82,6 @@
 
   &__line {
     background-color: $back;
-    // background-color: $border;
     border: none;
     height: 1px;
     width: 100%;
@@ -122,8 +121,7 @@
       width: 40px;
 
       &--vk {
-        // TODO: background-image: url("/wp-content/themes/astromaria/images/vk.svg");
-        background-image: url("./images/vk.svg");
+        background-image: url("/wp-content/themes/astromaria/images/vk.svg");
       }
     }
   }

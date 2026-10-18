@@ -58,7 +58,7 @@
   &__date-footer {
     align-items: center;
     display: flex;
-    gap: calc(var(--size) / 2);
+    gap: calc(var(--size) * 0.5);
 
     &-icon {
       background-image: url("/wp-content/themes/astromaria/images/date.png");
@@ -79,8 +79,6 @@
       flex-wrap: wrap;
     }
 
-    & .navigation {}
-
     & .nav-links {
       align-items: center;
       display: flex;
@@ -93,12 +91,6 @@
       border: 1px solid $border;
       border-radius: $radius;
       padding: calc(var(--size) * 0.5) calc(var(--size) * 0.75);
-
-      &.current {}
-
-      &.next {}
-
-      &.prev {}
     }
   }
 }
