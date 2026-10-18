@@ -1,19 +1,13 @@
 /**
  * Theme Name: Тема Astromaria
  * Author: Maria
- * Version: 1.0
+ * Version: 1.2
  */
 /*
 TODO: Редирект с http => https
-TODO: Установить для страницы "О нас" шаблон "О нас"
-TODO: Установить для страницы "Контакты" шаблон "Контакты"
-TODO: Создать файл 404
 TODO: Реализовать поиск по сайту
-TODO: Проверить все TODO на всём сайте (а также комментарии // и /*
-TODO: Публикация новостей и постов ещё и в группе в ВК
+TODO: Публикация новостей и постов ещё и в группе в ВК (?)
 TODO: Бот Python
-TODO: Очистить файлы SCSS от пустых селекторов
-TODO: var(--size) * 0.5 ИЛИ var(--size) / 2
 TODO: Удалить все неиспользуемые изображения - типа /wp-content/themes/astromaria/images/logo.png
 */
 @import "styles/settings/fonts";
@@ -22,10 +16,12 @@ TODO: Удалить все неиспользуемые изображения 
 @import "styles/settings/mixins";
 @import "styles/settings/general";
 
+@import "styles/elements/about";
 @import "styles/elements/article";
 @import "styles/elements/articles";
 @import "styles/elements/banner";
 @import "styles/elements/breadcrumbs";
+@import "styles/elements/contacts";
 @import "styles/elements/footer";
 @import "styles/elements/header";
 @import "styles/elements/page404";

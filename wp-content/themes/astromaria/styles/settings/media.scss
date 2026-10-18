@@ -37,7 +37,8 @@
     display: none;
   }
 
-  .article__image {
+  .article__image,
+  .about__image {
     height: 280px;
   }
 }
@@ -131,8 +132,6 @@
   }
 
   .article {
-    // 
-
     &__name {
       font-size: calc(var(--size) * 1.5);
     }
@@ -152,6 +151,16 @@
     &__reading {
       border: none;
       padding: 0;
+    }
+  }
+
+  .about {
+    &__heading {
+      font-size: calc(var(--size) * 1.5);
+    }
+
+    &__image {
+      height: 250px;
     }
   }
 }
