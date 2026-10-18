@@ -1,0 +1,31 @@
+.contacts {
+  margin-bottom: var(--size);
+
+  &__heading {
+    border-bottom: 2px solid $blue;
+    font-size: calc(var(--size) * 2);
+    margin-bottom: var(--size);
+    width: max-content;
+  }
+
+  &__text {
+    margin-bottom: calc(var(--size) * 0.5);
+  }
+
+  &__link {
+    color: $light;
+    transition: all $duration ease;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &__line {
+    background-color: $blue;
+    border: none;
+    height: 2px;
+    margin: var(--size) 0;
+    width: 50%;
+  }
+}

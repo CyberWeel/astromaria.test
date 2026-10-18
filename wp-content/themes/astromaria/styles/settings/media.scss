@@ -163,6 +163,16 @@
       height: 250px;
     }
   }
+
+  .contacts {
+    &__heading {
+      font-size: calc(var(--size) * 1.5);
+    }
+
+    &__line {
+      width: 100%;
+    }
+  }
 }
 @media (max-width: 480px) {
   .header__menu {
