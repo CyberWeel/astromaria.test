@@ -42,5 +42,7 @@
         </div>
       </footer>
     </div>
+    <section class="search"><? get_search_form() ?></section>
+    <? wp_footer() ?>
   </body>
 </html>

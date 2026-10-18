@@ -5,7 +5,6 @@
  */
 /*
 TODO: Редирект с http => https
-TODO: Реализовать поиск по сайту
 TODO: Публикация новостей и постов ещё и в группе в ВК (?)
 TODO: Бот Python
 TODO: Удалить все неиспользуемые изображения - типа /wp-content/themes/astromaria/images/logo.png
@@ -25,6 +24,8 @@ TODO: Удалить все неиспользуемые изображения 
 @import "styles/elements/footer";
 @import "styles/elements/header";
 @import "styles/elements/page404";
+@import "styles/elements/search";
+@import "styles/elements/searchpage";
 @import "styles/elements/site";
 
 @import "styles/settings/media";

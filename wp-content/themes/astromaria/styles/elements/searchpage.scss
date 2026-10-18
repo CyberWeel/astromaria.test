@@ -1,0 +1,37 @@
+.searchpage {
+  margin: var(--size) 0 calc(var(--size) * 2);
+
+  &__heading {
+    font-size: calc(var(--size) * 1.5);
+    font-weight: bold;
+    margin-bottom: var(--size);
+  }
+
+  &__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--size) * 0.5);
+    margin-bottom: var(--size);
+  }
+
+  &__tab {
+    background-color: $light;
+    border: 1px solid $border;
+    border-radius: $radius;
+    color: $dark;
+    padding: calc(var(--size) * 0.25) calc(var(--size) * 0.5);
+    transition: all $duration ease;
+
+    &--active,
+    &:hover {
+      background-color: $dark;
+      border-color: $blue;
+      color: $light;
+    }
+  }
+
+  & mark {
+    background-color: $blue;
+    color: $light;
+  }
+}

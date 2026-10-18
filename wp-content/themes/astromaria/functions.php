@@ -231,3 +231,27 @@ add_action('wp_enqueue_scripts', function() {
 		true
 	);
 });
+
+// Поиск ограничен только информационными материалами - статьями и новостями
+add_action('pre_get_posts', function($query) {
+	if (!is_admin() && $query->is_main_query() && $query->is_search()) {
+		$query->set('post_type', array('post', 'news'));
+		$query->set('posts_per_page', -1);
+	}
+});
+
+// Функция, выделяющая текст при поиске по сайту
+function highlight($text, $query) {
+  if (!$query) return esc_html($text);
+
+  $text = esc_html($text);
+  $words = preg_split('/\s+/u', trim($query));
+
+  foreach ($words as $word) {
+    if ($word === '') continue;
+
+    $text = preg_replace('/'.preg_quote(esc_html($word), '/').'/iu', '<mark>$0</mark>', $text);
+  }
+
+  return $text;
+}
