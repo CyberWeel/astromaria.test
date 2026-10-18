@@ -220,3 +220,14 @@ function get_related_posts($post_type = 'post', $limit = 4) {
 
 	return array_slice($found, 0, $limit);
 }
+
+// Подключение файла JavaScript
+add_action('wp_enqueue_scripts', function() {
+	wp_enqueue_script(
+		'main-js',
+		get_stylesheet_directory_uri() . '/js/main.min.js',
+		array('jquery'),
+		'1.0',
+		true
+	);
+});
